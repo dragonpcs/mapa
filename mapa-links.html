@@ -1,0 +1,317 @@
+<html>
+<head>
+<style type="text/css">
+.wrapper {
+  text-transform: uppercase;
+  color: #555;
+  cursor: help;
+  font-family: Tahoma,Arial;
+  font-size: 12px;
+  position: relative;
+  text-align: center;
+  -webkit-transform: translateZ(0); /* webkit flicker fix */
+  -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
+}
+.wrapper .tooltip {
+  background: #ccc;
+  bottom: 100%;
+  color: #000;
+  display: block;
+  margin-bottom: 15px;
+  opacity: 0;
+  padding: 20px;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  -webkit-transform: translateY(10px);
+     -moz-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+       -o-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+     -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+       -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+.wrapper .tooltip:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}  
+/* CSS Triangles - see Trevor's post 
+.wrapper .tooltip:after {
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid #ccc 10px;
+  bottom: -10px;
+  content: " ";
+  height: 0;
+  left: 50%;
+  margin-left: -13px;
+  position: absolute;
+  width: 0;
+}*/
+.wrapper:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+     -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+       -o-transform: translateY(0px);
+          transform: translateY(0px);
+}
+/* IE can just show/hide with no transition */
+.lte8 .wrapper .tooltip {
+  display: none;
+}
+.lte8 .wrapper:hover .tooltip {
+  display: block;
+}
+body {
+background-color: #CCC; 
+font-family: Tahoma,Arial;
+}
+#info {
+	position: absolute;
+	left: 680px; 
+	top: 320px;
+	width: 250px;
+	height: 20px;
+	text-align: center;
+	z-index: 1000;
+}
+</style>
+</head>
+
+<img name="foto" src="https://cdn.dooca.store/1586/files/1-4.jpg?v=1661454342" border="0" usemap="#image-map" width="1083" height="640">
+
+<map name="image-map">
+<div>
+	<div class="wrapper" id="info">
+		<area coords="465,307,500,336" shape="rect">
+		<div class="tooltip"><b>DRAGON COMPUTADORES</b><BR>Rua Álvares Penteado 177<BR>Centro Histórico - São Paulo/SP</div>
+	</div>
+</div>
+<div>
+	<div class="wrapper" id="info">
+		<area coords="537,43,571,76" shape="rect" onmouseover="foto.src='https://cdn.dooca.store/1586/files/2.jpg?v=1661454367'" onmouseout="foto.src='https://cdn.dooca.store/1586/files/1-4.jpg?v=1661454342'">
+		<div class="tooltip"><b>METRÔ SÃO BENTO</b><BR>Saída Pátio São Bento<BR>Largo São Bento, 109<br>Distância da loja: 300 metros</div>
+	</div>
+</div>
+<div>
+	<div class="wrapper" id="info">	
+		<area coords="546,115,579,148" shape="rect" onmouseover="foto.src='https://cdn.dooca.store/1586/files/3.jpg?v=1661454377'" onmouseout="foto.src='https://cdn.dooca.store/1586/files/1-4.jpg?v=1661454342'">
+		<div class="tooltip"><b>METRÔ SÃO BENTO</b><BR>Saída Rua São Bento<BR>Rua São Bento 540<br>Distância da loja: 280 metros</div>
+	</div>
+</div>
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="584,570,617,604" shape="rect" onmouseover="foto.src='https://cdn.dooca.store/1586/files/4.jpg?v=1661454385'" onmouseout="foto.src='https://cdn.dooca.store/1586/files/1-4.jpg?v=1661454342'">
+		<div class="tooltip"><b>METRÔ SÉ</b><BR>Saída Praça da Sé<BR>Praça da Sé s/n<br>Distância da loja: 400 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="620,259,646,292" shape="rect"onmouseover="foto.src='https://cdn.dooca.store/1586/files/5.jpg?v=1661454395'" onmouseout="foto.src='https://cdn.dooca.store/1586/files/1-4.jpg?v=1661454342'">
+		<div class="tooltip"><b>Sugestão de local de desembarque para motoristas de aplicativo</b><BR>Rua Boa Vista 159<br>Distância da loja: 260 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="379,213,414,246" shape="rect" onmouseover="foto.src='https://cdn.dooca.store/1586/files/6.jpg?v=1661454403'" onmouseout="foto.src='https://cdn.dooca.store/1586/files/1-4.jpg?v=1661454342'">
+		<div class="tooltip"><b>Sugestão de local de desembarque para motoristas de aplicativo</b><BR>Rua Líbero Badaró 425<br>Distância da loja: 210 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="226,402,260,436" shape="rect" onmouseover="foto.src='https://cdn.dooca.store/1586/files/13.jpg?v=1661454530'" onmouseout="foto.src='https://cdn.dooca.store/1586/files/1-4.jpg?v=1661454342'">
+		<div class="tooltip"><b>Metrô Anhangabaú</b><BR>Saída Sul<BR>Avenida Prestes Maia, S/N<br>Distância da loja: 550 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="169,362,203,394" shape="rect" onmouseover="foto.src='https://cdn.dooca.store/1586/files/14.jpg?v=1661454541'" onmouseout="foto.src='https://cdn.dooca.store/1586/files/1-4.jpg?v=1661454342'">
+		<div class="tooltip"><b>Metrô Anhangabaú</b><BR>Rua Formosa 49<br>Distância da loja: 700 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="392,278,404,290" shape="rect" onmouseover="foto.src='https://cdn.dooca.store/1586/files/12.jpg?v=1661454521'" onmouseout="foto.src='https://cdn.dooca.store/1586/files/1-4.jpg?v=1661454342'">
+		<div class="tooltip"><b>Top Stop Estacionamento</b><BR>R. Líbero Badaró, 382<br>Distância da loja: 220 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="429,207,441,218" shape="rect" onmouseover="foto.src='https://cdn.dooca.store/1586/files/11.jpg?v=1661454452'" onmouseout="foto.src='https://cdn.dooca.store/1586/files/1-4.jpg?v=1661454342'">
+		<div class="tooltip"><b>LBP- Estacionamento</b><BR>R. Líbero Badaró, 472<br>Distância da loja: 240 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="441,184,454,196" shape="rect" onmouseover="foto.src='https://cdn.dooca.store/1586/files/11.jpg?v=1661454452'" onmouseout="foto.src='https://cdn.dooca.store/1586/files/1-4.jpg?v=1661454342'">
+		<div class="tooltip"><b>Estacionamento</b><BR>R. Líbero Badaró, 492<br>Distância da loja: 260 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="505,98,516,109" shape="rect" onmouseover="foto.src='https://cdn.dooca.store/1586/files/10.jpg?v=1661454442'" onmouseout="foto.src='https://cdn.dooca.store/1586/files/1-4.jpg?v=1661454342'">
+		<div class="tooltip"><b>Estacionamento</b><BR>R. Líbero Badaró, 628<br>Distância da loja: 350 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="491,115,504,125" shape="rect" onmouseover="foto.src='https://cdn.dooca.store/1586/files/10.jpg?v=1661454442'" onmouseout="foto.src='https://cdn.dooca.store/1586/files/1-4.jpg?v=1661454342'">
+		<div class="tooltip"><b>Estacionamento</b><BR>R. Líbero Badaró, 616<br>Distância da loja: 340 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="468,106,479,117" shape="rect" onmouseover="foto.src='https://cdn.dooca.store/1586/files/10.jpg?v=1661454442'" onmouseout="foto.src='https://cdn.dooca.store/1586/files/1-4.jpg?v=1661454342'">
+		<div class="tooltip"><b>Estacionamento</b><BR>R. Líbero Badaró, 589<br>Distância da loja: 330 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="606,151,619,167" shape="rect" onmouseover="foto.src='https://cdn.dooca.store/1586/files/9.jpg?v=1661454434'" onmouseout="foto.src='https://cdn.dooca.store/1586/files/1-4.jpg?v=1661454342'">
+		<div class="tooltip"><b>Estacionamento Jockey Club</b><BR>R. Boa Vista, 286<br>Distância da loja: 300 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="617,236,629,248" shape="rect" onmouseover="foto.src='https://cdn.dooca.store/1586/files/7.jpg?v=1661454413'" onmouseout="foto.src='https://cdn.dooca.store/1586/files/1-4.jpg?v=1661454342'">
+		<div class="tooltip"><b>Estacionamento</b><BR>R. Boa Vista, 185<br>Distância da loja: 280 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="599,290,610,301" shape="rect" onmouseover="foto.src='https://cdn.dooca.store/1586/files/8.jpg?v=1661454421'" onmouseout="foto.src='https://cdn.dooca.store/1586/files/1-4.jpg?v=1661454342'">
+		<div class="tooltip"><b>Estacionamento</b><BR>R. Boa Vista, 90<br>Distância da loja: 330 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="605,325,616,337" shape="rect" onmouseover="foto.src='https://cdn.dooca.store/1586/files/8.jpg?v=1661454421'" onmouseout="foto.src='https://cdn.dooca.store/1586/files/1-4.jpg?v=1661454342'">
+		<div class="tooltip"><b>Tamar Park Estacionamento</b><BR>R. Boa Vista, 75<br>Distância da loja: 350 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="514,328,549,360" shape="rect">
+		<div class="tooltip"><b>Centro Cultural Banco do Brasil</b><BR>R. Álvares Penteado, 112<br>Distância da loja: 57 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="511,261,527,290" shape="rect">
+		<div class="tooltip"><b>B3 - Brasil, Bolsa, Balcão</b><BR>R. Quinze de Novembro, 275<br>Distância da loja: 160 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="579,179,594,208" shape="rect">
+		<div class="tooltip"><b>Farol Santander</b><BR>R. João Brícola, 24<br>Distância da loja: 230 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="468,176,483,205" shape="rect">
+		<div class="tooltip"><b>Edifício Martinelli</b><BR>R. São Bento, 405<br>Distância da loja: 170 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="655,398,706,437" shape="rect">
+		<div class="tooltip"><b>Pateo do Collegio</b><BR>Praça Pateo do Collegio, 2<br>Distância da loja: 350 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="665,481,700,516" shape="rect">
+		<div class="tooltip"><b>Caixa Cultural</b><BR>Praça da Sé, 111<br>Distância da loja: 400 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="514,5,558,40" shape="rect">
+		<div class="tooltip"><b>Mosteiro de São Bento</b><BR>Largo São Bento, s/nº<br>Distância da loja: 400 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="323,538,353,563" shape="rect">
+		<div class="tooltip"><b>Faculdade de Direito de São Paulo</b><BR>Largo São Francisco, 95<br>Distância da loja: 500 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="624,595,672,629" shape="rect">
+		<div class="tooltip"><b>Catedral Metropolitana de São Paulo</b><BR>Praça da Sé<br>Distância da loja: 500 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="184,162,218,196" shape="rect">
+		<div class="tooltip"><b>Theatro Municipal de São Paulo</b><BR>Praça Ramos de Azevedo, s/n<br>Distância da loja: 600 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="195,252,227,285" shape="rect">
+		<div class="tooltip"><b>Shopping Light</b><BR>R. Cel. Xavier de Toledo, 23<br>Distância da loja: 600 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="187,8,217,40" shape="rect">
+		<div class="tooltip"><b>Galeria do Rock</b><BR>Av. São João, 439<br>Distância da loja: 650 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="287,61,321,95" shape="rect">
+		<div class="tooltip"><b>Praça das Artes</b><BR>Av. São João, 281<br>Distância da loja: 500 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="351,45,387,73" shape="rect">
+		<div class="tooltip"><b>Agencia Central dos Correios</b><BR>Praca Pedro Lessa, s/n<br>Distância da loja: 350 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="288,352,322,377" shape="rect">
+		<div class="tooltip"><b>Prefeitura de São Paulo</b><BR>Viaduto do Cha, 15<br>Distância da loja: 450 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="109,521,147,550" shape="rect">
+		<div class="tooltip"><b>Terminal Bandeira</b><BR>Praça da Bandeira<br>Distância da loja: 750 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="856,300,894,328" shape="rect">
+		<div class="tooltip"><b>Terminal Dom Pedro II</b><BR>Rua 25 de Março 369<br>Distância da loja: 750 metros</div>
+	</div>
+</div>	
+<div>
+	<div class="wrapper" id="info">		
+	<area coords="913,265,952,294" shape="rect">
+		<div class="tooltip"><b>Terminal Mercado</b><BR>Acesso pelo Terminal Dom Pedro II<br>Distância da loja: 1000 metros</div>
+	</div>
+</div>	
+</map>
+</html>
